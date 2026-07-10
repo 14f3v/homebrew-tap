@@ -5,21 +5,21 @@
 class Kubetui < Formula
   desc "A terminal UI for managing and monitoring Kubernetes clusters"
   homepage "https://github.com/14f3v/kubectl-tui"
-  version "0.1.3"
+  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/14f3v/kubectl-tui/releases/download/v0.1.3/kubetui_0.1.3_darwin_amd64.tar.gz"
-      sha256 "0a56780c66778ca325022b4c20843f2405aaa2b7b6015f94e0060bb0d6f39bdc"
+      url "https://github.com/14f3v/kubectl-tui/releases/download/v1.0.0/kubetui_1.0.0_darwin_amd64.tar.gz"
+      sha256 "185fcdf398137b875a7a1227babce8bcda3b0b3f827cd05fd9516eec81ce96a6"
 
       define_method(:install) do
         bin.install "kubetui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/14f3v/kubectl-tui/releases/download/v0.1.3/kubetui_0.1.3_darwin_arm64.tar.gz"
-      sha256 "67a7aec6009811aebe0dc5735c18bf50c88a2c11a8e41075d4e0892cbf9d82d6"
+      url "https://github.com/14f3v/kubectl-tui/releases/download/v1.0.0/kubetui_1.0.0_darwin_arm64.tar.gz"
+      sha256 "b5225c32f780b2bcef85bfaa8b254395e19eea2019996676df82c9d849a1ace6"
 
       define_method(:install) do
         bin.install "kubetui"
@@ -29,15 +29,15 @@ class Kubetui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/14f3v/kubectl-tui/releases/download/v0.1.3/kubetui_0.1.3_linux_amd64.tar.gz"
-      sha256 "76cf1d0a67bc90437ed4ec0e4b1dd5de38cc5556e8902f136dbec360c103b192"
+      url "https://github.com/14f3v/kubectl-tui/releases/download/v1.0.0/kubetui_1.0.0_linux_amd64.tar.gz"
+      sha256 "52c53541d8ec663c92496ac0c4781ab7170cdf7acb3902b41632cbe1bd04efa8"
       define_method(:install) do
         bin.install "kubetui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/14f3v/kubectl-tui/releases/download/v0.1.3/kubetui_0.1.3_linux_arm64.tar.gz"
-      sha256 "ca40d947be7b8fd18fee688b431af034fc26bae9684e802db9d55b275528fe95"
+      url "https://github.com/14f3v/kubectl-tui/releases/download/v1.0.0/kubetui_1.0.0_linux_arm64.tar.gz"
+      sha256 "30b4a90e4db0775115c5ce849b853a036acf98a585eba4a03456142e17d9c7e9"
       define_method(:install) do
         bin.install "kubetui"
       end
